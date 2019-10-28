@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="Devoluciones.Views.DetalleArticuloPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.1*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Border Top -->
+                <StackLayout Grid.Row="0" 
+                             Grid.ColumnSpan="3"
+                             Grid.Column="0" 
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+
+
+                <!-- Codigo Articulo -->
+                <StackLayout Grid.Row="1" 
+                             Grid.Column="0" 
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+                <StackLayout Grid.Row="1" 
+                             Grid.Column="1" >
+
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.7*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   Text="Código Art." />
+
+                            <Entry Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   x:Name="lblArticuloCodigo" />
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Grid.Row="1" 
+                             Grid.Column="2" 
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+
+                
+                <!-- Nombre -->
+                <StackLayout Grid.Row="2" 
+                             Grid.Column="0" 
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+                <StackLayout Grid.Row="2" 
+                             Grid.Column="1" >
+
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.7*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   Text="Nombre" />
+
+                            <Entry Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   x:Name="lblArticuloNombre" />
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" 
+                             Grid.Column="2" 
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+
+
+                <!-- Imagen -->
+                <StackLayout Grid.Row="3" 
+                             Grid.Column="0" 
+                             Margin="0, 30, 0, 0"
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+                <StackLayout Grid.Row="3" 
+                             Grid.Column="1" 
+                             Margin="0, 30, 0, 0" >
+
+                    <Image x:Name="imgArticulo" 
+                           HeightRequest="200" />
+
+                </StackLayout>
+                <StackLayout Grid.Row="3" 
+                             Grid.Column="2" 
+                             Margin="0, 30, 0, 0"
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+
+
+                <!-- Button Volver -->
+                <StackLayout Grid.Row="4" 
+                             Grid.Column="0" 
+                             Margin="0, 20, 0, 0"
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+                <StackLayout Grid.Row="4" 
+                             Grid.Column="1" 
+                             Margin="0, 20, 0, 0" >
+
+                    <Button Text="Volver" 
+                            BackgroundColor="SlateGray"
+                            TextColor="White"
+                            CornerRadius="20" 
+                            HeightRequest="40"
+                            Clicked="OnButtonVolver_Clicked" />
+
+                </StackLayout>
+                <StackLayout Grid.Row="4" 
+                             Grid.Column="2" 
+                             Margin="0, 20, 0, 0"
+                             BackgroundColor="{StaticResource BgColorBorderPage}">
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
